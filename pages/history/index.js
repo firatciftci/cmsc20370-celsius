@@ -3,7 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Image from 'next/image';
 
-import styles from '../styles/History.module.scss';
+import styles from '../../styles/History.module.scss';
 
 const History = () => {
   return (
