@@ -72,9 +72,22 @@ const Home = () => {
             <div style={{ userSelect: 'none', pointerEvents: 'none' }}>
               <Image src="/chart.png" alt="Icon" width={500} height={155} />
             </div>
-            <Link href={'/history'}>
-              <a className={styles.historyButton}>View History</a>
-            </Link>
+            <div
+              style={{
+                display: 'grid',
+                gridAutoFlow: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                columnGap: '1rem',
+              }}
+            >
+              <Link href={'/history'}>
+                <a className={styles.historyButton}>View History</a>
+              </Link>
+              <Link href={'/leaderboard'}>
+                <a className={styles.historyButton}>View Leaderboard</a>
+              </Link>
+            </div>
           </div>
           <div className={styles.bottom2}>
             <div className={styles.subheader}>You can also pick any activity from this list!</div>

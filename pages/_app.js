@@ -12,19 +12,24 @@ const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
 
   useEffect(() => {
-    // router.push('/initial-assessment');
+    if (!Boolean(localStorage.getItem('firstTime'))) {
+      localStorage.setItem('firstTime', 'true');
+      router.push('/assessment');
+    }
   }, []);
 
   return (
     <>
       <Navbar className={styles.navbar}>
         <div className={styles.navbarContent}>
-          <Navbar.Brand className={styles.navbarBrand}>
-            <div style={{ userSelect: 'none', pointerEvents: 'none' }}>
-              <Image src="/icon.png" alt="Icon" width={25} height={25} />
-            </div>
-            <span style={{ userSelect: 'none' }}>Celsius</span>
-          </Navbar.Brand>
+          <Link href={'/'}>
+            <Navbar.Brand className={styles.navbarBrand}>
+              <div style={{ userSelect: 'none', pointerEvents: 'none' }}>
+                <Image src="/icon.png" alt="Icon" width={25} height={25} />
+              </div>
+              <span style={{ userSelect: 'none' }}>Celsius</span>
+            </Navbar.Brand>
+          </Link>
           <Link href={'/'}>
             <a
               className={styles.navbarItem}
