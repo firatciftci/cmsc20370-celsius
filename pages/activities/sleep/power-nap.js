@@ -32,7 +32,7 @@ const renderer = ({ hours, minutes, seconds, completed }) => {
             fontVariantNumeric: 'tabular-nums',
           }}
         >
-          0{hours}:{minutes}:{String(seconds).length === 1 ? '0' + seconds : seconds}
+          0{hours}:{String(minutes).length === 1 ? '0' + minutes : minutes}:{String(seconds).length === 1 ? '0' + seconds : seconds}
         </span>
       </div>
     );

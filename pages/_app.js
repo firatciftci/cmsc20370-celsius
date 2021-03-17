@@ -23,7 +23,7 @@ const MyApp = ({ Component, pageProps }) => {
             <div style={{ userSelect: 'none', pointerEvents: 'none' }}>
               <Image src="/icon.png" alt="Icon" width={25} height={25} />
             </div>
-            <span>Celsius</span>
+            <span style={{ userSelect: 'none' }}>Celsius</span>
           </Navbar.Brand>
           <Link href={'/'}>
             <a
