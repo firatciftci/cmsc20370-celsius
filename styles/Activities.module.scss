@@ -4,6 +4,7 @@
   margin-top: 2rem;
   font-weight: 700;
   color: #333;
+  margin-bottom: 2rem;
 }
 
 .headerSubtext {
@@ -11,21 +12,12 @@
   color: #333;
 }
 
-.content {
-  display: grid;
-  justify-content: center;
-}
-
-.item {
-  display: grid;
-  justify-content: center;
+.container {
+  margin-bottom: 5rem;
 }
 
 .bottom {
-  justify-self: center;
   display: grid;
-  grid-template-columns: auto auto;
-  justify-content: center;
 }
 
 .subheader {
@@ -44,12 +36,65 @@
 }
 
 .bottomItem {
+  justify-self: center;
   display: grid;
+  align-items: center;
+  width: 600px;
+  grid-template-columns: auto;
+  justify-content: space-between;
   background-color: #ffffff;
   padding: 0.75rem 1.25rem;
   margin: 1rem 0.5rem;
   border-radius: 1.125rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.bottomItemButton {
+  grid-row: 1 / 3;
+  grid-column: 2 / 3;
+  justify-self: end;
+  border: none;
+  background-color: #ffac60;
+  border-radius: 1.125rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.15s ease;
+
+  &:hover {
+    background-color: #da9351;
+  }
+}
+
+.bottomItemLink {
+  justify-self: center;
+  display: grid;
+  align-items: center;
+  width: 600px;
+  cursor: pointer;
+  color: #333;
+  grid-template-columns: auto;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  margin: 1rem 0.5rem;
+  border-radius: 1.125rem;
+  transition: all 0.15s ease;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  &:hover {
+    color: #333;
+    text-decoration: none;
+    background-color: #ffac60;
+  }
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.points {
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .bottomHeader {
@@ -91,12 +136,16 @@
   }
 }
 
-.historyButton {
+.shareButton {
   font-weight: 700;
   color: #333;
+  border: none;
   background-color: #ffac60;
   place-self: center;
-  padding: 0.5rem 1rem;
+  text-align: center;
+  width: 300px;
+  padding: 2rem 1rem;
+  margin-bottom: 1.5rem;
   border-radius: 1.125rem;
   transition: all 0.15s ease;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;

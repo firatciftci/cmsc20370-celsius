@@ -11,21 +11,12 @@
   color: #333;
 }
 
-.content {
-  display: grid;
-  justify-content: center;
-}
-
-.item {
-  display: grid;
-  justify-content: center;
+.container {
+  margin-bottom: 5rem;
 }
 
 .bottom {
-  justify-self: center;
   display: grid;
-  grid-template-columns: auto auto;
-  justify-content: center;
 }
 
 .subheader {
@@ -44,12 +35,31 @@
 }
 
 .bottomItem {
+  justify-self: center;
   display: grid;
+  align-items: center;
+  width: 400px;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
   background-color: #ffffff;
   padding: 0.75rem 1.25rem;
   margin: 1rem 0.5rem;
   border-radius: 1.125rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  &:last-child {
+    background-color: #ffac60;
+  }
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.points {
+  font-size: 1.125rem;
+  font-weight: 500;
 }
 
 .bottomHeader {
@@ -91,9 +101,10 @@
   }
 }
 
-.historyButton {
+.shareButton {
   font-weight: 700;
   color: #333;
+  border: none;
   background-color: #ffac60;
   place-self: center;
   padding: 0.5rem 1rem;
