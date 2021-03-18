@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Container from 'react-bootstrap/Container';
+import Link from 'next/link';
 
 import styles from '../../../styles/Activities.module.scss';
 
@@ -34,7 +35,9 @@ const Journal = () => {
             <div>Feeling bad because everybody is doing PDA on social media...</div>
             <button className={styles.bottomItemButton}>View</button>
           </div>
-          <button className={styles.shareButton}>+ Create New Entry</button>
+          <Link href={'/activities/journal/new'}>
+            <button className={styles.shareButton}>+ Create New Entry</button>
+          </Link>
         </div>
       </Container>
     </>
